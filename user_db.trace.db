@@ -1,0 +1,261 @@
+2021-06-06 19:46:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE `CANDIDATE` ( `ID` INT(8) NOT NULL AUTO_INCREMENT, `NAME` TEXT(8) NOT NULL, `LASTNAME` TEXT(8) NOT NULL, `ADDRESS` TEXT(250) NOT NULL, `CELLPHONE` TEXT(12) NOT NULL, `CITYNAME` TEXT(30) CHARACTER[*] SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, PRIMARY KEY (`ID`) )"; se esperaba "FOR, UNSIGNED, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "CREATE TABLE `CANDIDATE` ( `ID` INT(8) NOT NULL AUTO_INCREMENT, `NAME` TEXT(8) NOT NULL, `LASTNAME` TEXT(8) NOT NULL, `ADDRESS` TEXT(250) NOT NULL, `CELLPHONE` TEXT(12) NOT NULL, `CITYNAME` TEXT(30) CHARACTER[*] SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, PRIMARY KEY (`ID`) )"; expected "FOR, UNSIGNED, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE `candidate` ( `id` INT(8) NOT NULL AUTO_INCREMENT, `name` TEXT(8) NOT NULL, `lastName` TEXT(8) NOT NULL, `address` TEXT(250) NOT NULL, `cellphone` TEXT(12) NOT NULL, `cityName` TEXT(30) CHARACTER SET utf8 COLLATE utf8_unicode_520_ci NOT NULL, PRIMARY KEY (`id`) ) [42001-200]
+2021-06-06 19:49:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "INSERT INTO CANDIDATE (NAME,LASTNAME,ADDRESS,CELLPHONE,CITYNAME),[*] VALUES('Joao','Gonzalez','caracas',04143116630,'Caracas'), VALUES('Maria','Comesana','caracas',04121458753,'Caracas'), VALUES('Katherine','Merino','caracas',04241598675,'Caracas')"; se esperaba "DIRECT, SORTED, DEFAULT, VALUES, SET, (, WITH, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "INSERT INTO CANDIDATE (NAME,LASTNAME,ADDRESS,CELLPHONE,CITYNAME),[*] VALUES('Joao','Gonzalez','caracas',04143116630,'Caracas'), VALUES('Maria','Comesana','caracas',04121458753,'Caracas'), VALUES('Katherine','Merino','caracas',04241598675,'Caracas')"; expected "DIRECT, SORTED, DEFAULT, VALUES, SET, (, WITH, SELECT, TABLE, VALUES"; SQL statement:
+insert into candidate (name,lastName,address,cellphone,cityName), values('Joao','Gonzalez','caracas',04143116630,'Caracas'), values('Maria','Comesana','caracas',04121458753,'Caracas'), values('Katherine','Merino','caracas',04241598675,'Caracas') [42001-200]
+2021-06-06 19:52:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE 'candidate'[*] ( 'id' INT(8) NOT NULL AUTO_INCREMENT, 'name' VARCHAR(8) NOT NULL, 'lastName' VARCHAR(8) NOT NULL, 'address' VARCHAR(250) NOT NULL, 'cellPhone' VARCHAR(12) NOT NULL, 'cityName' VARCHAR(30) NOT NULL, PRIMARY KEY (`ID`) )"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE 'candidate'[*] ( 'id' INT(8) NOT NULL AUTO_INCREMENT, 'name' VARCHAR(8) NOT NULL, 'lastName' VARCHAR(8) NOT NULL, 'address' VARCHAR(250) NOT NULL, 'cellPhone' VARCHAR(12) NOT NULL, 'cityName' VARCHAR(30) NOT NULL, PRIMARY KEY (`ID`) )"; expected "identifier"; SQL statement:
+CREATE TABLE 'candidate' ( 'id' INT(8) NOT NULL AUTO_INCREMENT, 'name' VARCHAR(8) NOT NULL, 'lastName' VARCHAR(8) NOT NULL, 'address' VARCHAR(250) NOT NULL, 'cellPhone' VARCHAR(12) NOT NULL, 'cityName' VARCHAR(30) NOT NULL, PRIMARY KEY (`id`) ) [42001-200]
+2021-06-06 20:07:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE 'candidate'[*] ( 'id' INT NOT NULL AUTO_INCREMENT, 'name' VARCHAR(8) NOT NULL, 'lastName' VARCHAR(8) NOT NULL, 'address' VARCHAR(250) NOT NULL, 'cellPhone' VARCHAR(12) NOT NULL, 'cityName' VARCHAR(30) NOT NULL )"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE 'candidate'[*] ( 'id' INT NOT NULL AUTO_INCREMENT, 'name' VARCHAR(8) NOT NULL, 'lastName' VARCHAR(8) NOT NULL, 'address' VARCHAR(250) NOT NULL, 'cellPhone' VARCHAR(12) NOT NULL, 'cityName' VARCHAR(30) NOT NULL )"; expected "identifier"; SQL statement:
+CREATE TABLE 'candidate' ( 'id' INT NOT NULL AUTO_INCREMENT, 'name' VARCHAR(8) NOT NULL, 'lastName' VARCHAR(8) NOT NULL, 'address' VARCHAR(250) NOT NULL, 'cellPhone' VARCHAR(12) NOT NULL, 'cityName' VARCHAR(30) NOT NULL ) [42001-200]
+2021-06-06 20:08:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE 'candidate'[*] ( 'id' INT AUTO_INCREMENT, 'name' VARCHAR(8) NOT NULL, 'lastName' VARCHAR(8) NOT NULL, 'address' VARCHAR(250) NOT NULL, 'cellPhone' VARCHAR(12) NOT NULL, 'cityName' VARCHAR(30) NOT NULL )"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE 'candidate'[*] ( 'id' INT AUTO_INCREMENT, 'name' VARCHAR(8) NOT NULL, 'lastName' VARCHAR(8) NOT NULL, 'address' VARCHAR(250) NOT NULL, 'cellPhone' VARCHAR(12) NOT NULL, 'cityName' VARCHAR(30) NOT NULL )"; expected "identifier"; SQL statement:
+CREATE TABLE 'candidate' ( 'id' INT AUTO_INCREMENT, 'name' VARCHAR(8) NOT NULL, 'lastName' VARCHAR(8) NOT NULL, 'address' VARCHAR(250) NOT NULL, 'cellPhone' VARCHAR(12) NOT NULL, 'cityName' VARCHAR(30) NOT NULL ) [42001-200]
+2021-06-06 20:11:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE `CANDIDATE` ( `ID` INT AUTO_INCREMENT, `NAME` VARCHAR(50) CHARACTER[*] SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `LASTNAME` VARCHAR(50) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `ADDRESS` VARCHAR(250) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `CELLPHONE` VARCHAR(50) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `CITYNAME` VARCHAR(30) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, PRIMARY KEY (`ID`) )"; se esperaba "FOR, UNSIGNED, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "CREATE TABLE `CANDIDATE` ( `ID` INT AUTO_INCREMENT, `NAME` VARCHAR(50) CHARACTER[*] SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `LASTNAME` VARCHAR(50) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `ADDRESS` VARCHAR(250) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `CELLPHONE` VARCHAR(50) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `CITYNAME` VARCHAR(30) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, PRIMARY KEY (`ID`) )"; expected "FOR, UNSIGNED, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE `candidate` ( `id` INT AUTO_INCREMENT, `name` VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_unicode_520_ci NOT NULL, `lastName` VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_unicode_520_ci NOT NULL, `address` VARCHAR(250) CHARACTER SET utf8 COLLATE utf8_unicode_520_ci NOT NULL, `cellPhone` VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_unicode_520_ci NOT NULL, `cityName` VARCHAR(30) CHARACTER SET utf8 COLLATE utf8_unicode_520_ci NOT NULL, PRIMARY KEY (`id`) ) [42001-200]
+2021-06-06 20:14:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE `CANDIDATE` ( `ID` INT AUTO_INCREMENT, `NAME` VARCHAR(50) CHARACTER[*] SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `LASTNAME` VARCHAR(50) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `ADDRESS` VARCHAR(250) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `CELLPHONE` VARCHAR(50) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `CITYNAME` VARCHAR(30) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, PRIMARY KEY (`ID`) )"; se esperaba "FOR, UNSIGNED, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "CREATE TABLE `CANDIDATE` ( `ID` INT AUTO_INCREMENT, `NAME` VARCHAR(50) CHARACTER[*] SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `LASTNAME` VARCHAR(50) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `ADDRESS` VARCHAR(250) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `CELLPHONE` VARCHAR(50) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `CITYNAME` VARCHAR(30) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, PRIMARY KEY (`ID`) )"; expected "FOR, UNSIGNED, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE `candidate` ( `id` INT AUTO_INCREMENT, `name` VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_unicode_520_ci NOT NULL, `lastName` VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_unicode_520_ci NOT NULL, `address` VARCHAR(250) CHARACTER SET utf8 COLLATE utf8_unicode_520_ci NOT NULL, `cellPhone` VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_unicode_520_ci NOT NULL, `cityName` VARCHAR(30) CHARACTER SET utf8 COLLATE utf8_unicode_520_ci NOT NULL, PRIMARY KEY (`id`) ) [42001-200]
+2021-06-06 20:16:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE `CANDIDATE` ( `ID` INT AUTO_INCREMENT, `NAME` VARCHAR(50) CHARACTER[*] SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `LASTNAME` VARCHAR(50) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `ADDRESS` VARCHAR(250) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `CELLPHONE` VARCHAR(50) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `CITYNAME` VARCHAR(30) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, PRIMARY KEY (`ID`) )"; se esperaba "FOR, UNSIGNED, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "CREATE TABLE `CANDIDATE` ( `ID` INT AUTO_INCREMENT, `NAME` VARCHAR(50) CHARACTER[*] SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `LASTNAME` VARCHAR(50) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `ADDRESS` VARCHAR(250) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `CELLPHONE` VARCHAR(50) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `CITYNAME` VARCHAR(30) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, PRIMARY KEY (`ID`) )"; expected "FOR, UNSIGNED, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE `candidate` ( `id` INT AUTO_INCREMENT, `name` VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_unicode_520_ci NOT NULL, `lastName` VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_unicode_520_ci NOT NULL, `address` VARCHAR(250) CHARACTER SET utf8 COLLATE utf8_unicode_520_ci NOT NULL, `cellPhone` VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_unicode_520_ci NOT NULL, `cityName` VARCHAR(30) CHARACTER SET utf8 COLLATE utf8_unicode_520_ci NOT NULL, PRIMARY KEY (`id`) ) [42001-200]
+2021-06-06 20:17:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE `CANDIDATE` ( `ID` INT AUTO_INCREMENT, `NAME` VARCHAR(50) CHARACTER[*] SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `LASTNAME` VARCHAR(50) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `ADDRESS` VARCHAR(250) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `CELLPHONE` VARCHAR(50) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `CITYNAME` VARCHAR(30) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, PRIMARY KEY (`ID`) )"; se esperaba "FOR, UNSIGNED, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "CREATE TABLE `CANDIDATE` ( `ID` INT AUTO_INCREMENT, `NAME` VARCHAR(50) CHARACTER[*] SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `LASTNAME` VARCHAR(50) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `ADDRESS` VARCHAR(250) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `CELLPHONE` VARCHAR(50) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `CITYNAME` VARCHAR(30) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, PRIMARY KEY (`ID`) )"; expected "FOR, UNSIGNED, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE `candidate` ( `id` INT AUTO_INCREMENT, `name` VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_unicode_520_ci NOT NULL, `lastName` VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_unicode_520_ci NOT NULL, `address` VARCHAR(250) CHARACTER SET utf8 COLLATE utf8_unicode_520_ci NOT NULL, `cellPhone` VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_unicode_520_ci NOT NULL, `cityName` VARCHAR(30) CHARACTER SET utf8 COLLATE utf8_unicode_520_ci NOT NULL, PRIMARY KEY (`id`) ) [42001-200]
+2021-06-06 20:18:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE `CANDIDATE` ( `ID` INT AUTO_INCREMENT, `NAME` VARCHAR(50) CHARACTER[*] SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `LASTNAME` VARCHAR(50) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `ADDRESS` VARCHAR(250) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `CELLPHONE` VARCHAR(50) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `CITYNAME` VARCHAR(30) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL )"; se esperaba "FOR, UNSIGNED, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "CREATE TABLE `CANDIDATE` ( `ID` INT AUTO_INCREMENT, `NAME` VARCHAR(50) CHARACTER[*] SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `LASTNAME` VARCHAR(50) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `ADDRESS` VARCHAR(250) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `CELLPHONE` VARCHAR(50) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `CITYNAME` VARCHAR(30) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL )"; expected "FOR, UNSIGNED, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE `candidate` ( `id` INT AUTO_INCREMENT, `name` VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_unicode_520_ci NOT NULL, `lastName` VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_unicode_520_ci NOT NULL, `address` VARCHAR(250) CHARACTER SET utf8 COLLATE utf8_unicode_520_ci NOT NULL, `cellPhone` VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_unicode_520_ci NOT NULL, `cityName` VARCHAR(30) CHARACTER SET utf8 COLLATE utf8_unicode_520_ci NOT NULL ) [42001-200]
+2021-06-06 20:22:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CANDIDATE" no encontrada
+Table "CANDIDATE" not found; SQL statement:
+insert into candidate(name,lastName,address,cellPhone,cityName) values('Joao','Gonzalez','caracas','04143116630','Caracas'), values('Maria','Comesana','caracas','04874563210','Caracas'), values('Katherine','Merino','caracas','01234569857','Caracas') [42102-200]
+2021-06-06 20:23:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE `CANDIDATE` ( `ID` INT AUTO_INCREMENT, `NAME` VARCHAR(50) CHARACTER[*] SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `LASTNAME` VARCHAR(50) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `ADDRESS` VARCHAR(250) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `CELLPHONE` VARCHAR(50) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `CITYNAME` VARCHAR(30) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL )"; se esperaba "FOR, UNSIGNED, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "CREATE TABLE `CANDIDATE` ( `ID` INT AUTO_INCREMENT, `NAME` VARCHAR(50) CHARACTER[*] SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `LASTNAME` VARCHAR(50) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `ADDRESS` VARCHAR(250) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `CELLPHONE` VARCHAR(50) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL, `CITYNAME` VARCHAR(30) CHARACTER SET UTF8 COLLATE UTF8_UNICODE_520_CI NOT NULL )"; expected "FOR, UNSIGNED, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE `candidate` ( `id` INT AUTO_INCREMENT, `name` VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_unicode_520_ci NOT NULL, `lastName` VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_unicode_520_ci NOT NULL, `address` VARCHAR(250) CHARACTER SET utf8 COLLATE utf8_unicode_520_ci NOT NULL, `cellPhone` VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_unicode_520_ci NOT NULL, `cityName` VARCHAR(30) CHARACTER SET utf8 COLLATE utf8_unicode_520_ci NOT NULL ) [42001-200]
+2021-06-06 20:23:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: La cantidad de columnas no coincide
+Column count does not match; SQL statement:
+insert into candidate(name,lastName,address,cellPhone,cityName) values('Joao','Gonzalez','caracas','04143116630','Caracas'), values('Maria','Comesana','caracas','04874563210','Caracas'), values('Katherine','Merino','caracas','01234569857','Caracas') [21002-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.command.Parser.parseValues(Parser.java:6464)
+	at org.h2.command.Parser.parseQuerySub(Parser.java:2822)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:2649)
+	at org.h2.command.Parser.parseQuery(Parser.java:2620)
+	at org.h2.command.Parser.readTerm(Parser.java:4431)
+	at org.h2.command.Parser.readFactor(Parser.java:3343)
+	at org.h2.command.Parser.readSum(Parser.java:3330)
+	at org.h2.command.Parser.readConcat(Parser.java:3305)
+	at org.h2.command.Parser.readCondition(Parser.java:3108)
+	at org.h2.command.Parser.readExpression(Parser.java:3059)
+	at org.h2.command.Parser.parseValuesForCommand(Parser.java:1881)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1817)
+	at org.h2.command.Parser.parseInsert(Parser.java:1749)
+	at org.h2.command.Parser.parsePrepared(Parser.java:954)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:601)
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:49)
+	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.runScripts(DataSourceScriptDatabaseInitializer.java:72)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.runScripts(AbstractScriptDatabaseInitializer.java:131)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:91)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyDataScripts(AbstractScriptDatabaseInitializer.java:85)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:76)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:65)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:438)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:337)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1336)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1325)
+	at com.example.demo.PracticaApplication.main(PracticaApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2021-06-06 20:25:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CANDIDATE" ya existe
+Table "CANDIDATE" already exists; SQL statement:
+CREATE TABLE `candidate` ( `id` INT AUTO_INCREMENT, `name` VARCHAR(50) , `lastName` VARCHAR(50), `address` VARCHAR(250), `cellPhone` VARCHAR(50), `cityName` VARCHAR(30) ) [42101-200]
+2021-06-06 20:25:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CANDIDATE" ya existe
+Table "CANDIDATE" already exists; SQL statement:
+CREATE TABLE `candidate` ( `id` int NOT NULL AUTO_INCREMENT, `name` VARCHAR(50) , `lastName` VARCHAR(50), `address` VARCHAR(250), `cellPhone` VARCHAR(50), `cityName` VARCHAR(30), PRIMARY KEY (id) ) [42101-200]
+2021-06-06 20:56:18 database: wrong user or password; user: "SA"
+org.h2.message.DbException: Nombre de usuario ó password incorrecto
+Wrong user name or password [28000-200]
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.engine.Engine.openSession(Engine.java:131)
+	at org.h2.engine.Engine.openSession(Engine.java:192)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:171)
+	at org.h2.engine.Engine.createSession(Engine.java:166)
+	at org.h2.engine.Engine.createSession(Engine.java:29)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:340)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:309)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:289)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:785)
+	at org.h2.server.web.WebApp.test(WebApp.java:947)
+	at org.h2.server.web.WebApp.process(WebApp.java:238)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:173)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:129)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:166)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Nombre de usuario ó password incorrecto
+Wrong user name or password [28000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:461)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 55 more
+2021-06-06 20:56:25 database: wrong user or password; user: "ROOT"
+org.h2.message.DbException: Nombre de usuario ó password incorrecto
+Wrong user name or password [28000-200]
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.engine.Engine.openSession(Engine.java:131)
+	at org.h2.engine.Engine.openSession(Engine.java:192)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:171)
+	at org.h2.engine.Engine.createSession(Engine.java:166)
+	at org.h2.engine.Engine.createSession(Engine.java:29)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:340)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:309)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:289)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:785)
+	at org.h2.server.web.WebApp.login(WebApp.java:1008)
+	at org.h2.server.web.WebApp.process(WebApp.java:223)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:173)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:129)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:166)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Nombre de usuario ó password incorrecto
+Wrong user name or password [28000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:461)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 55 more
+2021-06-06 22:37:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE `EMPLOYEE` ( `ID` INT NOT NULL AUTO_INCREMENT, `PERSON` VARCHAR(50) , `POSITION` VARCHAR(50), `SALARY` VARCHAR(250) PRIMARY KEY ([*]ID) )"; se esperaba "HASH, AUTO_INCREMENT, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "CREATE TABLE `EMPLOYEE` ( `ID` INT NOT NULL AUTO_INCREMENT, `PERSON` VARCHAR(50) , `POSITION` VARCHAR(50), `SALARY` VARCHAR(250) PRIMARY KEY ([*]ID) )"; expected "HASH, AUTO_INCREMENT, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE `employee` ( `id` int NOT NULL AUTO_INCREMENT, `person` VARCHAR(50) , `position` VARCHAR(50), `salary` VARCHAR(250) PRIMARY KEY (id) ) [42001-200]
+2021-06-06 22:58:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE `EMPLOYEE` ( `ID` INT NOT NULL AUTO_INCREMENT, `PERSON` VARCHAR(50) , `POSITION` VARCHAR(50), `SALARY` VARCHAR(250) PRIMARY KEY ([*]ID) )"; se esperaba "HASH, AUTO_INCREMENT, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "CREATE TABLE `EMPLOYEE` ( `ID` INT NOT NULL AUTO_INCREMENT, `PERSON` VARCHAR(50) , `POSITION` VARCHAR(50), `SALARY` VARCHAR(250) PRIMARY KEY ([*]ID) )"; expected "HASH, AUTO_INCREMENT, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE `employee` ( `id` int NOT NULL AUTO_INCREMENT, `person` VARCHAR(50) , `position` VARCHAR(50), `salary` VARCHAR(250) PRIMARY KEY (id) ) [42001-200]
+2021-06-06 23:00:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE `EMPLOYEE` ( `ID` INT NOT NULL AUTO_INCREMENT, `PERSON` VARCHAR(50) , `POSITION` VARCHAR(50), `SALARY` VARCHAR(250) PRIMARY KEY ([*]ID) )"; se esperaba "HASH, AUTO_INCREMENT, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "CREATE TABLE `EMPLOYEE` ( `ID` INT NOT NULL AUTO_INCREMENT, `PERSON` VARCHAR(50) , `POSITION` VARCHAR(50), `SALARY` VARCHAR(250) PRIMARY KEY ([*]ID) )"; expected "HASH, AUTO_INCREMENT, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE `employee` ( `id` int NOT NULL AUTO_INCREMENT, `person` VARCHAR(50) , `position` VARCHAR(50), `salary` VARCHAR(250) PRIMARY KEY (id) ) [42001-200]
