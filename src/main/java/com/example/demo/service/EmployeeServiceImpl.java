@@ -17,7 +17,7 @@ public class EmployeeServiceImpl implements IEmployeeService {
 		
 
 	@Override
-	public List<Employee> listarEmployee() {
+	public List<Employee> listEmployee() {
 
 		return iEmployeeDao.findAll();
 		
@@ -25,7 +25,7 @@ public class EmployeeServiceImpl implements IEmployeeService {
 	}
 
 	@Override
-	public Employee guardarEmployee(@RequestBody Employee employee) {
+	public Employee saveEmployee(@RequestBody Employee employee) {
 		
 		return iEmployeeDao.save(employee);
 	}
@@ -43,15 +43,16 @@ public class EmployeeServiceImpl implements IEmployeeService {
 	}
 
 	@Override
-	public Employee actualizarEmployee(Employee employee) {
+	public Employee updateEmployee(Employee employee) {
 		
 		return iEmployeeDao.save(employee);
 	}
 
 	@Override
-	public void eliminarEmployee(Long id) {
+	public void deleteEmployee(Long id) {
 		
 		iEmployeeDao.deleteById(id);
 	}
+
 
 }

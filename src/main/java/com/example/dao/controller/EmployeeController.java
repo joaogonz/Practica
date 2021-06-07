@@ -25,16 +25,16 @@ public class EmployeeController {
 	
 	
 	@GetMapping("/employee")
-	public List<Employee>  listarEmployee(){
+	public List<Employee>  listEmployee(){
 		
-		return employeeServiceImpl.listarEmployee();
+		return employeeServiceImpl.listEmployee();
 		
 	}
 	
 	@PostMapping("/employee")
-	public Employee guardarEmployee(@RequestBody Employee employee) {
+	public Employee saveEmployee(@RequestBody Employee employee) {
 		
-		return employeeServiceImpl.guardarEmployee(employee);
+		return employeeServiceImpl.saveEmployee(employee);
 		
 	}
 
@@ -52,7 +52,7 @@ public class EmployeeController {
 	}
 	
 	@PutMapping("/employee/{id}")
-	public Employee actualizarEmployee(@PathVariable(name= "id") Long id,@RequestBody Employee employee) {
+	public Employee updateEmployee(@PathVariable(name= "id") Long id,@RequestBody Employee employee) {
 		
 		Employee  employee_select = new Employee();
 		Employee  employee_update = new Employee();
@@ -63,15 +63,15 @@ public class EmployeeController {
 		employee_select.setPosition(employee.getPosition());
 		employee_select.setSalary(employee.getSalary());
 		
-		employee_select = employeeServiceImpl.actualizarEmployee(employee_select);
+		employee_select = employeeServiceImpl.updateEmployee(employee_select);
 		
 		return employee_update;
 	}
 	
 	@DeleteMapping("/employee/{id}")
-	public void eliminarEmployee(@PathVariable(name = "id") Long id) {
+	public void deleteEmployee(@PathVariable(name = "id") Long id) {
 		
-		employeeServiceImpl.eliminarEmployee(id);
+		employeeServiceImpl.deleteEmployee(id);
 		
 	}
 }

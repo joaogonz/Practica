@@ -5,15 +5,15 @@ import com.example.demo.dto.Employee;
 
 public interface IEmployeeService {
 	
-	public List<Employee> listarEmployee();
+	public List<Employee> listEmployee();
 	
-	public Employee guardarEmployee(Employee employee);
+	public Employee saveEmployee(Employee employee);
 	
 	public Employee employeeCreate(Employee employee);
 	
-	public Employee actualizarEmployee(Employee employee);
+	public Employee updateEmployee(Employee employee);
 	
-	public void eliminarEmployee(Long id);
+	public void deleteEmployee(Long id);
 
 	Employee employeeID(Long id);
 
